@@ -1,6 +1,5 @@
-const apiKey = "060c5e544640c163e6d0b29c85750b70"; // Replace with your OpenWeatherMap API Key
+const apiKey = "060c5e544640c163e6d0b29c85750b70"; 
 
-// Function to fetch weather for a city
 function getWeather() {
     let city = document.getElementById("cityInput").value.trim();
     if (!city) {
@@ -42,7 +41,6 @@ function getWeather() {
         });
 }
 
-// Function to detect user's location and fetch weather
 function getLocationWeather() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -84,7 +82,7 @@ function getLocationWeather() {
     }
 }
 
-// Function to fetch 5-day forecast
+
 function getForecast() {
     let city = document.getElementById("cityInput").value.trim();
     if (!city) {
@@ -134,7 +132,7 @@ function getForecast() {
         });
 }
 
-// Function to convert Celsius to Fahrenheit
+
 function convertTemp(tempC) {
     let tempF = (tempC * 9 / 5) + 32;
     alert(`Temperature in Fahrenheit: ${tempF.toFixed(2)}°F`);
